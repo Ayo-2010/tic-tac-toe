@@ -8,6 +8,7 @@ Play tic tac toe against the computer or a friend.
 - Two-player mode on the same device
 - Winning line highlight
 - Persistent scoreboard
+- A How to play popup explains the rules
 
 ## Running it
 

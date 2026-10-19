@@ -14,6 +14,7 @@
   <header class="game-head">
     <h1>Tic Tac Toe</h1>
     <p id="turnText" class="turn">Your turn — you're X</p>
+    <button class="help-btn" id="helpBtn" type="button">How to play</button>
   </header>
 
   <div class="mode-bar">
@@ -46,6 +47,23 @@
     <div class="banner-emoji" id="bannerEmoji">🎉</div>
     <h2 id="bannerTitle">You win!</h2>
     <button class="btn primary" id="bannerBtn">Next round</button>
+  </div>
+</div>
+
+<div class="help-modal" id="helpModal" hidden>
+  <div class="help-backdrop" data-close></div>
+  <div class="help-dialog" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+    <button class="help-close" id="helpClose" type="button" aria-label="Close">×</button>
+    <h2 class="help-title" id="helpTitle">How to play</h2>
+    <p class="help-lede">The classic three-in-a-row game on a 3 by 3 grid. Line up three of your marks before your opponent does.</p>
+    <ol class="help-steps">
+      <li>Choose vs Computer or 2 Players.</li>
+      <li>On your turn, click an empty square to place your mark.</li>
+      <li>Line up three marks in a row, a column or a diagonal to win.</li>
+      <li>If every square fills with no line, the round is a draw.</li>
+      <li>The difficulty bar changes how hard the computer plays. Unbeatable cannot be beaten.</li>
+      <li>New round clears the board; Reset score clears the tally.</li>
+    </ol>
   </div>
 </div>
 
