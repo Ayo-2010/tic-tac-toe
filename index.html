@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic Tac Toe</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="game">
+  <header class="game-head">
+    <h1>Tic Tac Toe</h1>
+    <p id="turnText" class="turn">Your turn — you're X</p>
+  </header>
+
+  <div class="mode-bar">
+    <button class="mode is-active" data-mode="cpu">vs Computer</button>
+    <button class="mode" data-mode="friend">2 Players</button>
+  </div>
+
+  <div class="difficulty-bar" id="difficultyBar">
+    <button class="diff is-active" data-level="easy">Easy</button>
+    <button class="diff" data-level="medium">Medium</button>
+    <button class="diff" data-level="hard">Unbeatable</button>
+  </div>
+
+  <div class="board" id="board"></div>
+
+  <div class="score">
+    <div class="score-item x"><span class="score-sym">X</span><span class="score-num" id="scoreX">0</span><span class="score-name" id="nameX">You</span></div>
+    <div class="score-item draw"><span class="score-sym">=</span><span class="score-num" id="scoreD">0</span><span class="score-name">Draws</span></div>
+    <div class="score-item o"><span class="score-sym">O</span><span class="score-num" id="scoreO">0</span><span class="score-name" id="nameO">Computer</span></div>
+  </div>
+
+  <div class="actions">
+    <button class="btn ghost" id="resetRound">New round</button>
+    <button class="btn ghost" id="resetScore">Reset score</button>
+  </div>
+</div>
+
+<div class="banner" id="banner" hidden>
+  <div class="banner-card">
+    <div class="banner-emoji" id="bannerEmoji">🎉</div>
+    <h2 id="bannerTitle">You win!</h2>
+    <button class="btn primary" id="bannerBtn">Next round</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
