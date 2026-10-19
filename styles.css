@@ -5,17 +5,22 @@
   --border: rgba(255, 255, 255, 0.09);
   --text: #eef1fb;
   --muted: #8b93ad;
-  --x: #4fa8ff;
-  --o: #ff6b9d;
-  --draw: #ffc247;
+  --x: #f87171;
+  --o: #60a5fa;
+  --draw: #fbbf24;
   --radius: 18px;
 }
+
+[hidden] {
+  display: none !important;
+}
+
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: 'Poppins', system-ui, sans-serif;
-  background: radial-gradient(700px 500px at 50% -10%, rgba(79, 168, 255, 0.16), transparent 60%), var(--bg);
+  background: radial-gradient(700px 500px at 50% -10%, rgba(248, 113, 113, 0.16), transparent 60%), var(--bg);
   color: var(--text);
   min-height: 100vh;
   display: grid;
@@ -79,11 +84,11 @@ body {
 @keyframes pop { from { transform: scale(0.5); opacity: 0.3; } }
 
 .cell.win {
-  background: rgba(79, 168, 255, 0.16);
+  background: rgba(248, 113, 113, 0.16);
   border-color: var(--x);
   animation: glow 1s ease infinite alternate;
 }
-@keyframes glow { to { box-shadow: 0 0 24px rgba(79, 168, 255, 0.55); } }
+@keyframes glow { to { box-shadow: 0 0 24px rgba(248, 113, 113, 0.55); } }
 
 .score { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
 
@@ -117,7 +122,7 @@ body {
 .btn.ghost { background: var(--panel); border: 1px solid var(--border); color: var(--text); }
 .btn.ghost:hover { border-color: var(--x); transform: translateY(-2px); }
 .btn.primary { background: linear-gradient(135deg, var(--x), #7c5cff); color: #fff; }
-.btn.primary:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(79, 168, 255, 0.4); }
+.btn.primary:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(248, 113, 113, 0.4); }
 
 .banner {
   position: fixed;

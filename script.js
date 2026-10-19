@@ -26,6 +26,7 @@ let level = 'medium';
 let over = false;
 let busy = false;
 let scores = { X: 0, O: 0, D: 0 };
+let winCombo = [];
 
 const HUMAN = 'X';
 const CPU = 'O';
@@ -45,7 +46,8 @@ function buildBoard() {
 function render() {
   board.querySelectorAll('.cell').forEach((btn, i) => {
     btn.textContent = cells[i];
-    btn.className = 'cell' + (cells[i] ? ' ' + cells[i].toLowerCase() : '');
+    btn.className =
+      'cell' + (cells[i] ? ' ' + cells[i].toLowerCase() : '') + (winCombo.includes(i) ? ' win' : '');
     btn.disabled = over || cells[i] !== '';
   });
 }
@@ -125,15 +127,10 @@ function place(index, player) {
   }
 
   if (cells.every((c) => c !== '')) return;
-
-  if (mode === 'friend') {
-    current = current === 'X' ? 'O' : 'X';
-    setTurnLabel();
-  }
 }
 
 function highlight(combo) {
-  (combo || []).forEach((i) => board.children[i].classList.add('win'));
+  winCombo = combo || [];
 }
 
 function showBanner(title, emoji) {
@@ -240,6 +237,7 @@ function newRound() {
   current = 'X';
   over = false;
   busy = false;
+  winCombo = [];
   banner.hidden = true;
   buildBoard();
   render();
